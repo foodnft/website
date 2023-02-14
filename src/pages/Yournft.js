@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const YourNft = () => {
   return (
-    <div className=" min-w-max min-h-[100vh] overflow-x-hidden  ">
+    <div className=" min-h-[100vh] overflow-x-hidden  ">
     <div className='relative ' >
         <header className=' bg-black h-[60px] flex justify-between  px-3 py-2 ' >
             <img src={chicken} ></img>

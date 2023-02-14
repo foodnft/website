@@ -13,22 +13,23 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className=" min-w-max min-h-[100vh] overflow-x-hidden  ">
-    <div className='relative ' >
-      <header className=' bg-black h-[180px] flex justify-between  px-3 py-2 ' >
-        <img src={chicken} ></img>
-        <div className='my-auto' >
-          <button className='bg-[#C32F27] text-white px-10 py-6  rounded-[40px] text-[2.8rem] mx-10 '  >My Collection</button>
+    <div className="  min-w-max min-h-[100vh] overflow-x-hidden   ">
+      <div className='relative ' >
+        <header className=' bg-black h-[60px] flex justify-between  px-3 py-2 ' >
+          <img src={chicken} ></img>
+          <div className='my-auto' >
+            <button className='bg-[#C32F27] text-white px-4 py-2  rounded-[40px] text-[1.0rem] mx-1 '  >My Collection</button>
 
-        </div>
-      </header>
-      <div className=' relative z-0 bg-[#F9DC5C] p-2' >
+          </div>
+        </header>
+
+        <div className=' w-[100vw] relative z-0 bg-[#F9DC5C] p-2' >
         <img src={bglayer} className="w-[100%] absolute top-0 bottom-0 z-[-1] " ></img>
 
-        <img src={banner} className=" w-[100%] mt-20 " ></img>
-v          <img src={banner2} className=" w-[100%] mt-20 " ></img>
+          <img src={banner} className=" w-[100%] mt-10 " ></img>
+          <img src={banner2} className=" w-[100%] mt-10 " ></img>
           <Link to="/getnft">
-          <button className=' bg-[#c32f27] text-white py-8 w-[92%] ml-[4%] mx-auto my-8  text-[3.2rem]  font-bold  '>Click here to start</button>
+          <button className=' w-[90vw] bg-[#c32f27] translate-x-[-50%] ml-[50%] text-white py-4 my-8 text-[1.4rem]  font-bold  '>Click here to start</button>
 
           </Link>
 
@@ -47,20 +48,21 @@ v          <img src={banner2} className=" w-[100%] mt-20 " ></img>
             30 days after fully grown</p>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <footer className=' bg-black flex justify-center p-2   w-[100%] ' >
-        <div className=' text-center text-white m-3  '>
-          <h3 className=' border-[1px]-[#C32F27] font-bold text-4xl my-4'>Content</h3>
-          <p className=' flex m-2 text-4xl my-2' > <img src={mail} className="mr-2 w-8 " ></img>your@anonheLper.com</p>
-          <p className=' flex m-2 text-4xl my-2' > <img src={mail} className="mr-2 w-8"></img>ibrahim.bhabay@gmail.com</p>
-          <p className=' flex m-2 text-4xl my-2' > <img src={telegram} className="mr-2 w-8"></img>@CocktaiLDev</p>
-          <img src={chicken} className="w-[25%] mx-auto my-10" ></img>
-        
-        </div>
-      </footer>
+        <footer className=' bg-black flex justify-center p-2   w-[100%] ' >
+          <div className=' text-center text-white m-3  '>
+            <h3 className=' border-[1px]-[#C32F27] font-bold text-4xl my-4'>Content</h3>
+            <p className=' flex m-2 text-xl my-2' > <img src={mail} className="mr-2 w-6 " ></img>your@anonheLper.com</p>
+            <p className=' flex m-2 text-xl my-2' > <img src={mail} className="mr-2 w-6"></img>ibrahim.bhabay@gmail.com</p>
+            <p className=' flex m-2 text-xl my-2' > <img src={telegram} className="mr-2 w-6"></img>@CocktaiLDev</p>
+            <img src={chicken} className="w-[25%] mx-auto my-10" ></img>
+
+          </div>
+        </footer>
+
+      </div>
     </div>
-  </div>
   )
 }
 
