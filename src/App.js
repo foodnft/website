@@ -1,21 +1,22 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
 
-const MainLandingPage = React.lazy(() => import("./pages/MainLandingPage"));
-const CreateAccount = React.lazy(() => import("./pages/CreateAccount"));
-const HeaderComponent = React.lazy(() => import("./Components/Header"));
-const FooterComponent = React.lazy(() => import("./Components/Footer"));
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from './pages/Home';
+import Getnft from "./pages/Getnft";
+import Mycollection from "./pages/Mycollection";
+import Yournft from "./pages/Yournft";
+import './App.css';
 
 function App() {
   return (
-    <div className=" min-w-max min-h-[100vh] overflow-x-hidden  ">
-      <HeaderComponent />
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLandingPage />} />
-        <Route path="/createAccount" element={<CreateAccount />} />
+        <Route path="/*" element={<Home />} />
+        <Route path="/getnft" element={<Getnft/>} />
+        <Route path="/mycollection" element={<Mycollection/>} />
+        <Route path="/yournft" element={<Yournft/>} />
+
       </Routes>
-      <FooterComponent />
-    </div>
+    </BrowserRouter>
   );
 }
 
