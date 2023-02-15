@@ -90,16 +90,13 @@ const Getnft = () => {
 
                         {/* <p>Terms and Conditions | Private Policy</p> */}
                     </div>
-
-
-
                 </div>
 
                 <footer className=' bg-black flex justify-center p-2   w-[100%] ' >
                     <div className=' text-center text-white m-3  '>
                         <h3 className=' border-[1px]-[#C32F27] font-bold text-4xl my-4'>Content</h3>
                         <p className=' flex m-2 text-xl my-2' > <img src={mail} className="mr-2 w-6 " ></img>your@anonheLper.com</p>
-                        <p className=' flex m-2 text-xl my-2' > <img src={mail} className="mr-2 w-6"></img>ibrahim.bhabay@gmail.com</p>
+                        <p className=' flex m-2 text-xl my-2' > <img src={mail} className="mr-2 w-6"></img>your@broastedchicken.com</p>
                         <p className=' flex m-2 text-xl my-2' > <img src={telegram} className="mr-2 w-6"></img>@CocktaiLDev</p>
                         <img src={chicken} className="w-[25%] mx-auto my-10" ></img>
 
