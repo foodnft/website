@@ -52,7 +52,7 @@ const Getnft = () => {
                                     <select id="cars" name="cars" className='h-14 w-[20%] text-center font-bold text-2xl '>
                                         <option value="mal" className='font-bold text-2xl  ' >+60</option>
                                     </select>
-                                    <input type={Number} onKeyPress={handleKeyPress} maxLength={15} className="h-14 w-[60%] font-bold text-2xl text-center " ></input>
+                                    <input type={Number} onKeyPress={handleKeyPress} maxLength={10} className="h-14 w-[60%] font-bold text-2xl text-center " ></input>
 
                                 </form>
                             </div>
