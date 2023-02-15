@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-const MainLandingPage = React.lazy(() => import("./Pages/MainLandingPage"));
-const CreateAccount = React.lazy(() => import("./Pages/CreateAccount"));
+const MainLandingPage = React.lazy(() => import("./pages/MainLandingPage"));
+const CreateAccount = React.lazy(() => import("./pages/CreateAccount"));
 const HeaderComponent = React.lazy(() => import("./Components/Header"));
 const FooterComponent = React.lazy(() => import("./Components/Footer"));
 
