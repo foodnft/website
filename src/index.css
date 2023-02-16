@@ -57,3 +57,18 @@ code {
     transform: rotate(360deg);
   }
 }
+
+.nft-heading {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #000000;
+  font-size: 24px;
+}
+
+.yellow_color {
+  color: #fdf523;
+}

@@ -4,7 +4,7 @@ import mail from "../../images/svg/mail.svg";
 import telegram from "../../images/svg/telegram.svg";
 import chicken from "../../images/svg/chicken.svg";
 
-function Index() {
+function Footer() {
   return (
     <footer className=" bg-black flex justify-center p-2   w-[100%] ">
       <div className=" text-center text-white m-3  ">
@@ -26,4 +26,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Footer;

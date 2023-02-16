@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // ./bglayer.svg
 import bglayer from "../../images/svg/bglayer.svg";
@@ -9,7 +10,9 @@ import chicken2 from "../../images/chicken2.png";
 import chicken3 from "../../images/chicken3.png";
 import arrowdown from "../../images/arrowdown.svg";
 
-function Index() {
+function MainLandingPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="relative ">
       <div className=" relative z-0 bg-[#F9DC5C] p-2">
@@ -19,7 +22,10 @@ function Index() {
         ></img>
         <img src={banner} className=" w-[100%] mt-20 "></img>v{" "}
         <img src={banner2} className=" w-[100%] mt-20 "></img>
-        <button className=" bg-[#c32f27] text-white py-8 w-[92%] ml-[4%] mx-auto my-8  text-[3.2rem]  font-bold  ">
+        <button
+          onClick={() => navigate("/createAccount")}
+          className=" bg-[#c32f27] text-white py-8 w-[92%] ml-[4%] mx-auto my-8  text-[3.2rem]  font-bold  "
+        >
           Click here to start
         </button>
         <div className="mx-2 pb-16 rounded-2xl bg-[#231f1e]">
@@ -53,4 +59,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default MainLandingPage;
