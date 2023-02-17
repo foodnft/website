@@ -26,7 +26,8 @@ const Enterotp = () => {
                 <img src={bglayer} className='w-[100%] absolute top-0 bottom-0 z-[-1] '></img>
                 <h1 className='text-[2.4rem] text-center font-bold my-6'>Enter OTP</h1>
                 <div className='h-[50vh] w-[92%] mx-auto bg-black mt-20 my-2 rounded-xl relative  flex flex-col justify-center '>
-                        <div style={{ padding: '20px'}} className='relative top-0 h-[100vh] flex flex-col bg-black  rounded-xl '>
+                        <div style={{ padding: '20px'}} className='relative top-0 h-[100vh] flex flex-col bg-black rounded-xl drop-shadow-xl
+'>
                             <h2 className='text-[#fdf523] text-2xl  my-10 text-center mx-2 font-bold'>Collect the Tastiest <br/> Chicken NFTs</h2>
                             <div >
                                 <form className='flex flex-col justify-center text-white '>
