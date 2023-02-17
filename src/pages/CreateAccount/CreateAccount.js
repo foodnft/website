@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useRef } from "react";
 import { useNavigate } from "react-router";
 
 import { asyncApiCall } from "../../Axios";
@@ -50,11 +49,14 @@ function CreateAccount() {
     };
     asyncApiCall(url)
       .then((res) => {
-        if (res.status(200)) {
-          navigate("/mintNft");
+        console.log(res);
+        if (res.status === 200) {
+          navigate("/myCollection");
         }
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -83,6 +85,7 @@ function CreateAccount() {
                     onChange={(e) => setCountryCode(e.target.value)}
                   >
                     <option value="+60">+60</option>
+                    <option value="+91">+91</option>
                   </select>
                   <input
                     type="number"
