@@ -21,11 +21,15 @@ const Home = () => {
 
         <div className='w-[100vw] relative z-0 bg-[#F9DC5C] p-2 '>
         <img src={bglayer} className='w-[100%] absolute top-0 bottom-0 z-[-1] '></img>
+        <img src={bglayer} className='w-[100%] absolute top-[100vh] bottom-0 z-[-1] '></img>
+        <img src={bglayer} className='w-[100%] absolute top-[200vh] bottom-0 z-[-1] '></img>
 
           <img src={banner} className='w-[100%] mt-10 '></img>
           <img src={banner2} className='w-[100%] mt-10 '></img>
           <Link to='/getnft'>
-          <button className='w-[90vw] bg-[#c32f27] translate-x-[-50%] ml-[50%] text-white py-4 my-8 text-[1.4rem] font-bold  '>Click here to start</button>
+          <button className='w-[90vw] bg-[#c32f27] translate-x-[-50%] ml-[50%] text-white py-4 my-8 text-[1.4rem] font-bold drop-shadow-xl
+
+ '>Click here to start</button>
 
           </Link>
 
