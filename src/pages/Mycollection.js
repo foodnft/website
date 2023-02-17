@@ -25,7 +25,10 @@ const Mycollection = () => {
 
                     <div className='h-[50vh] w-[92%] mx-auto bg-black mt-20 my-2 rounded-xl  flex flex-col justify-center '>
                         <img src={Success} className='w-[80%] mx-auto'></img>
+                        <Link to="/yournft" className='mx-auto' >
                             <button className='bg-[#db7c26] my-10 py-3  inline w-[180px] rounded-3xl mx-auto  font-bold text-lg'>Your Collection</button>
+
+                        </Link>
                             
                         <p>Terms and Conditions | Private Policy</p>
                     </div>
