@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router";
 
 import { asyncApiCall } from "../../Axios";
@@ -7,7 +6,7 @@ import bglayer from "../../images/svg/bglayer.svg";
 
 import "./style.scss";
 
-function CreateAccount() {
+function GetNFT() {
   const [countryCode, setCountryCode] = useState("+60");
   const [showInput, setShowInput] = useState(true);
   const [mobileNumber, setMobileNumber] = useState("");
@@ -15,10 +14,37 @@ function CreateAccount() {
   const [optValue1, setOtpValue1] = useState("");
   const [optValue2, setOtpValue2] = useState("");
   const [optValue3, setOtpValue3] = useState("");
+  const [btnDisable, setBtnDisable] = useState(true);
+  const [resednBtn, setResndBtn] = useState(true);
+  const [resendTimer, setResendTimer] = useState(60);
 
+  const optResendTimer = useRef();
   const navigate = useNavigate();
 
+  const startTimer = () => {
+    optResendTimer.current = setInterval(() => {
+      setResendTimer((previousTime) => (previousTime -= 1));
+    }, 1000);
+  };
+
+  useEffect(() => {
+    if (mobileNumber.length === 9 || mobileNumber.length === 10) {
+      setBtnDisable(false);
+    } else {
+      setBtnDisable(true);
+    }
+    return () => clearInterval(optResendTimer.current);
+  }, [mobileNumber]);
+
+  useEffect(() => {
+    if (resendTimer === 0) {
+      setResndBtn(false);
+      clearInterval(optResendTimer.current);
+    }
+  }, [resendTimer]);
+
   const sendOtp = () => {
+    sessionStorage.setItem("userMobileNumber", `${countryCode}${mobileNumber}`);
     const url = {
       url: "/otp/sendOtp",
       method: "post",
@@ -30,6 +56,7 @@ function CreateAccount() {
       .then((res) => {
         if (res.status === 200) {
           setShowInput(false);
+          startTimer();
         }
       })
       .catch((err) => {
@@ -59,8 +86,25 @@ function CreateAccount() {
       });
   };
 
+  const reSendOtp = () => {
+    const apiData = {
+      url: "/otp/resendOtp",
+      method: "post",
+      data: {
+        mobileNumber: sessionStorage.getItem("userMobileNumber"),
+      },
+    };
+    asyncApiCall(apiData)
+      .then((data) => {
+        setResndBtn(true);
+        setResendTimer(60);
+        startTimer();
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
-    <div className="relative ">
+    <div className="relative createAcountContainer">
       <div className=" relative z-0 bg-[#F9DC5C] p-2">
         <img
           src={bglayer}
@@ -95,7 +139,13 @@ function CreateAccount() {
                     onChange={(e) => setMobileNumber(e.target.value)}
                   />
                 </div>
-                <button className="mobileBtn first-otp-btn" onClick={sendOtp}>
+                <button
+                  className={`mobileBtn first-otp-btn ${
+                    btnDisable && "disabled-btn"
+                  }`}
+                  disabled={btnDisable}
+                  onClick={sendOtp}
+                >
                   Send OTP
                 </button>
                 <div className="terms-and-condition">
@@ -163,11 +213,17 @@ function CreateAccount() {
                   Confirm
                 </button>
                 <button
-                  className="mobileBtn second-otp-btn resend-btn"
-                  onClick={sendOtp}
+                  className={`mobileBtn second-otp-btn resend-btn ${
+                    resednBtn && "disabled-btn"
+                  }`}
+                  onClick={reSendOtp}
+                  disabled={resednBtn}
                 >
                   Re Send
                 </button>
+                <div className="timer-count-value">
+                  Resend : {resendTimer} Seconds
+                </div>
               </div>
             </>
           )}
@@ -177,27 +233,4 @@ function CreateAccount() {
   );
 }
 
-{
-  /* <div className="container">
-      <div className="relative ">
-        <div className=" relative z-0 bg-[#F9DC5C] p-2">
-          <img
-            src={bglayer}
-            className="w-[100%] absolute top-0 bottom-0 z-[-1] "
-          />
-        </div>
-      </div>
-      <div className="input_container">
-        <input
-          className="mobileInput"
-          ref={mobileNumberRef}
-          value={mobileNumberRef.current?.value}
-        />
-        <button className="mobileBtn" onClick={sendOtp}>
-          Send OTP
-        </button>
-      </div>
-    </div> */
-}
-
-export default CreateAccount;
+export default GetNFT;

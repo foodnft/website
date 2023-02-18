@@ -1,34 +1,30 @@
-import React from "react";
-import { Suspense } from "react";
-import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
-import Home from './pages/Home'
-import Getnft from './pages/Getnft'
-import Yournft from './pages/Yournft'
-import Enterotp from "./pages/Enterotp";
-const MainLandingPage = React.lazy(() =>
-  import("./pages/MainLandingPage/MainLandingPage")
-);
-const CreateAccount = React.lazy(() =>
-  import("./pages/CreateAccount/CreateAccount")
-);
-const Mycollection = React.lazy(() => import("./pages/Mycollection"));
-const HeaderComponent = React.lazy(() => import("./components/Header"));
-const FooterComponent = React.lazy(() => import("./components/Footer"));
+import { Suspense, lazy } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
+import HeaderComponent from "./components/Header";
+import FooterComponent from "./components/Footer";
+const Home = lazy(() => import("./pages/Home"));
+const Getnft = lazy(() => import("./pages/GetNFT/GetNFT"));
+const Mycollection = lazy(() => import("./pages/Mycollection"));
+const Yournft = lazy(() => import("./pages/Yournft"));
+const Enterotp = lazy(() => import("./pages/Enterotp"));
 
 function App() {
   const { pathname } = useLocation();
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<Home />} />
-        <Route path="/getnft" element={<Getnft/>} />
-        <Route path="/enterotp" element={<Enterotp/>} />
-        <Route path="/mycollection" element={<Mycollection/>} />
-        <Route path="/yournft" element={<Yournft/>} />
-
-      </Routes>
-    </BrowserRouter>
+    <>
+      <HeaderComponent />
+      <Suspense fallback={<div>Loading..</div>}>
+        <Routes>
+          <Route path="/*" element={<Home />} />
+          <Route path="/getnft" element={<Getnft />} />
+          <Route path="/enterotp" element={<Enterotp />} />
+          <Route path="/mycollection" element={<Mycollection />} />
+          <Route path="/yournft" element={<Yournft />} />
+        </Routes>
+      </Suspense>
+      {pathname === "/" && <FooterComponent />}
+    </>
   );
 }
 
