@@ -28,7 +28,7 @@ const Getnft = () => {
     };
 
     return (
-        <div className='min-h-[100vh] overflow-x-hidden  '>
+        <div className='min-h-[100vh] overflow-x-hidden '>
             <div className='relative '>
               <Header/>
                 <div className='relative z-0 bg-[#F9DC5C] p-2 h-[920px]'>
@@ -49,14 +49,9 @@ const Getnft = () => {
                             </div>
                             <Link to='/enterotp'className='mx-auto'>
                             <button className='bg-[#db7c26] my-10 py-2 inline w-[150px] rounded-3xl mx-auto  font-bold text-lg'>Send OTP</button>
-                            
                         </Link>
-
-
                         </div>
                   
-
-
                         {/* <p>Terms and Conditions | Private Policy</p> */}
                     </div>
                 </div>

@@ -11,13 +11,13 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Nft from '../components/Nft'
 
-const YourNft = () => {
+const Yournft = () => {
     return (
-        <div className='min-h-[100vh] overflow-x-hidden  '>
+        <div className='min-h-[100vh] overflow-x-hidden'>
             <div className='relative '>
                 <Header />
                 <div className='relative z-0 bg-[#F9DC5C] p-2 h-[1000px]'>
-                    <img src={bglayer} className='w-[100%] absolute top-0 bottom-0 z-[-1] '></img>
+                    <img src={bglayer} className='w-[100%] absolute top-0 bottom-0 z-[-1]'></img>
                     <h1 className='text-[2.4rem] text-center font-bold my-6'>Your Nft</h1>
                     <Nft />
                 </div>
@@ -27,4 +27,4 @@ const YourNft = () => {
     )
 }
 
-export default YourNft
+export default Yournft
