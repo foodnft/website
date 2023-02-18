@@ -1,7 +1,10 @@
 import React from "react";
 import { Suspense } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-
+import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
+import Home from './pages/Home'
+import Getnft from './pages/Getnft'
+import Yournft from './pages/Yournft'
+import Enterotp from "./pages/Enterotp";
 const MainLandingPage = React.lazy(() =>
   import("./pages/MainLandingPage/MainLandingPage")
 );
@@ -11,7 +14,7 @@ const CreateAccount = React.lazy(() =>
 const Mycollection = React.lazy(() => import("./pages/Mycollection"));
 const HeaderComponent = React.lazy(() => import("./components/Header"));
 const FooterComponent = React.lazy(() => import("./components/Footer"));
-import Enterotp from "./pages/Enterotp";
+
 
 function App() {
   const { pathname } = useLocation();

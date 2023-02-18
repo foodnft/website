@@ -1,4 +1,7 @@
 import React from "react";
+import { useState } from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import chicken from "../images/chicken.svg";
 import mail from "../images/mail.svg";
 import telegram from "../images/telegram.svg";
@@ -47,7 +50,7 @@ const Mycollection = () => {
 
                             <p>Terms and Conditions | Private Policy</p>
                         </div> : <></>
-                    }
+                    
 
                 </div>
           <div className="h-[50vh] w-[92%] mx-auto bg-black mt-20 my-2 rounded-xl  flex flex-col justify-center ">
@@ -57,16 +60,18 @@ const Mycollection = () => {
             </button>
 
             <p>Terms and Conditions | Private Policy</p>
-          </div>
+          </div> 
         </div>
-
+        
                 <Footer />
             </div>
-        </div>
-        {/* <Footer /> */}
+            
+            :<></>}</div> 
+        
       </div>
     </div>
   );
+  
 };
 
 export default Mycollection;
