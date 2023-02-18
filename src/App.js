@@ -1,23 +1,30 @@
+import { Suspense, lazy } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/Home';
-import Getnft from "./pages/Getnft";
-import Mycollection from "./pages/Mycollection";
-import Yournft from "./pages/Yournft";
-import './App.css';
-import Enterotp from "./pages/Enterotp";
+import HeaderComponent from "./Components/Header";
+import FooterComponent from "./Components/Footer";
+const Home = lazy(() => import("./pages/Home"));
+const Getnft = lazy(() => import("./pages/GetNFT/GetNFT"));
+const Mycollection = lazy(() => import("./pages/Mycollection"));
+const Yournft = lazy(() => import("./pages/Yournft"));
+const Enterotp = lazy(() => import("./pages/Enterotp"));
 
 function App() {
+  const { pathname } = useLocation();
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<Home />} />
-        <Route path="/getnft" element={<Getnft/>} />
-        <Route path="/enterotp" element={<Enterotp/>} />
-        <Route path="/mycollection" element={<Mycollection/>} />
-        <Route path="/yournft" element={<Yournft/>} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <HeaderComponent />
+      <Suspense fallback={<div>Loading..</div>}>
+        <Routes>
+          <Route path="/*" element={<Home />} />
+          <Route path="/getnft" element={<Getnft />} />
+          <Route path="/enterotp" element={<Enterotp />} />
+          <Route path="/mycollection" element={<Mycollection />} />
+          <Route path="/yournft" element={<Yournft />} />
+        </Routes>
+      </Suspense>
+      {pathname === "/" && <FooterComponent />}
+    </>
   );
 }
 

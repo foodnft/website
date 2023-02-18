@@ -8,15 +8,78 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-  font-family: 'Arvo', serif;
+  font-family: "Arvo", serif;
   letter-spacing: 1px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.text-border{
+.nft-heading {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #000000;
+  font-size: 24px;
+}
+
+.yellow_color {
+  color: #fdf523;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.text-border {
   text-shadow: 0px 0px 2px red;
+}
+
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.disabled-btn {
+  opacity: 0.8;
+  cursor: not-allowed !important;
 }
