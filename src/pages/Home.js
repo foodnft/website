@@ -27,7 +27,7 @@ const Home = () => {
           <img src={banner} className='w-[100%] mt-10 '></img>
           <img src={banner2} className='w-[100%] mt-10 '></img>
           <Link to='/getnft'>
-          <button className='w-[90vw] bg-[#c32f27] translate-x-[-50%] ml-[50%] text-white py-4 my-8 text-[1.4rem] font-bold drop-shadow-xl
+          <button className='w-[94%] bg-[#c32f27] translate-x-[-50%] ml-[50%] text-white py-4 my-8 text-[1.4rem] rounded-md font-bold drop-shadow-xl
 
  '>Click here to start</button>
 
