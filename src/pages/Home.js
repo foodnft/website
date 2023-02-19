@@ -14,6 +14,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const Home = () => {
+  
   return (
     <div className='max-w-[480px] mx-auto min-h-[100vh] overflow-x-hidden  '>
       <div className='relative '>
