@@ -15,11 +15,11 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <div className='min-w-max min-h-[100vh] overflow-x-hidden '>
+    <div className='max-w-[480px] mx-auto min-h-[100vh] overflow-x-hidden  '>
       <div className='relative '>
         <Header/>
 
-        <div className='w-[100vw] relative z-0 bg-[#F9DC5C] p-2 '>
+        <div className='w-[100%] relative z-0 bg-[#F9DC5C] p-2 '>
         <img src={bglayer} className='w-[100%] absolute top-0 bottom-0 z-[-1] '></img>
         <img src={bglayer} className='w-[100%] absolute top-[100vh] bottom-0 z-[-1] '></img>
         <img src={bglayer} className='w-[100%] absolute top-[200vh] bottom-0 z-[-1] '></img>

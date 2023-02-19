@@ -13,7 +13,7 @@ import Nft from '../components/Nft'
 
 const YourNft = () => {
     return (
-        <div className='min-h-[100vh] overflow-x-hidden  '>
+        <div className='max-w-[480px] mx-auto min-h-[100vh] overflow-x-hidden  '>
             <div className='relative '>
                 <Header />
                 <div className='relative z-0 bg-[#F9DC5C] p-2 h-[1000px]'>
