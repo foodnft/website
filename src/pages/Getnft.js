@@ -12,20 +12,20 @@ import Footer from '../components/Footer'
 
 const Getnft = () => {
 
-    const [showPopUp, setShowPopUp] = useState(false);
-    const handleClick = () => {
-        setShowPopUp(!showPopUp);
-    };
+    const [digits, setDigits] = useState('');
 
-    const [value, setValue] = useState('');
+    function handleDigitsChange(event) {
+      const newDigits = event.target.value.replace(/[^0-9]/g, '');
+      setDigits(newDigits);
+    }
+  
+    function handleSubmit(event) {
+      event.preventDefault();
+      console.log('Submitted digits:', digits);
+    }
+  
+    const isSubmitDisabled = digits.length !== 10;
 
-    const handleKeyPress = (event) => {
-        const keyCode = event.keyCode || event.which;
-        const keyValue = String.fromCharCode(keyCode);
-        if (!/^\d$/.test(keyValue)) {
-            event.preventDefault();
-        }
-    };
 
     return (
         <div className='max-w-[480px] mx-auto min-h-[100vh]  overflow-x-hidden  '>
@@ -45,12 +45,12 @@ const Getnft = () => {
                                     <select id='cars'name='cars'className='h-14 w-[20%] text-center font-bold text-2xl '>
                                         <option value='mal'className='font-bold text-2xl  '>+60</option>
                                     </select>
-                                    <input type={Number} onKeyPress={handleKeyPress} maxLength={10} className='h-14 w-[60%] font-bold text-2xl text-center '></input>
+                                    <input type={Number} value={digits} onChange={handleDigitsChange} maxLength={10} className='h-14 w-[60%] font-bold text-2xl text-center '></input>
 
                                 </form>
                             </div>
                             <Link to='/enterotp'className='mx-auto'>
-                            <button className='bg-[#db7c26] my-10 py-2 inline w-[150px] rounded-3xl mx-auto  font-bold text-lg'>Send OTP</button>
+                            <button className='bg-[#db7c26] my-10 py-2 inline w-[150px] rounded-3xl mx-auto  font-bold text-lg' disabled={isSubmitDisabled} >Send OTP</button>
                             
                         </Link>
 
