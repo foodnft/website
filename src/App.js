@@ -1,24 +1,27 @@
+import { Route, Routes, useLocation } from "react-router-dom";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/Home';
-import Getnft from "./pages/Getnft";
+import Home from "./pages/Home";
+import Getnft from "./pages/GetNFT/Getnft";
 import Mycollection from "./pages/Mycollection";
 import Yournft from "./pages/Yournft";
-import './App.css';
-import Enterotp from "./pages/Enterotp";
+import HeaderComponent from "./Components/Header";
+import FooterComponent from "./Components/Footer";
+
+import "./App.css";
 
 function App() {
+  const { pathname } = useLocation();
   return (
-    <BrowserRouter>
+    <>
+      <HeaderComponent />
       <Routes>
         <Route path="/*" element={<Home />} />
-        <Route path="/getnft" element={<Getnft/>} />
-        <Route path="/enterotp" element={<Enterotp/>} />
-        <Route path="/mycollection" element={<Mycollection/>} />
-        <Route path="/yournft" element={<Yournft/>} />
-
+        <Route path="/getnft" element={<Getnft />} />
+        <Route path="/mycollection" element={<Mycollection />} />
+        <Route path="/yournft" element={<Yournft />} />
       </Routes>
-    </BrowserRouter>
+      {pathname === "/" && <FooterComponent />}
+    </>
   );
 }
 
