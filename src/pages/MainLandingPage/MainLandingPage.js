@@ -17,11 +17,12 @@ function MainLandingPage() {
     <div className="relative ">
       <div className=" relative z-0 bg-[#F9DC5C] p-2">
         <img
+          alt=""
           src={bglayer}
           className="w-[100%] absolute top-0 bottom-0 z-[-1] "
         ></img>
-        <img src={banner} className=" w-[100%] mt-20 "></img>v{" "}
-        <img src={banner2} className=" w-[100%] mt-20 "></img>
+        <img alt="" src={banner} className=" w-[100%] mt-20 "></img>v{" "}
+        <img alt="" src={banner2} className=" w-[100%] mt-20 "></img>
         <button
           onClick={() => navigate("/createAccount")}
           className=" bg-[#c32f27] text-white py-8 w-[92%] ml-[4%] mx-auto my-8  text-[3.2rem]  font-bold  "
@@ -33,22 +34,39 @@ function MainLandingPage() {
             <h2 className="text-center m-4 text-5xl font-bold my-10 ">
               How does it works ?
             </h2>
-            <img src={chicken1} width="60%" className="mx-auto my-4"></img>
+            <img
+              alt=""
+              src={chicken1}
+              width="60%"
+              className="mx-auto my-4"
+            ></img>
             <h3 className="text-center font-bold text-4xl ">Nest your NFT</h3>
             <img
+              alt=""
               src={arrowdown}
               width="16%"
               className="mx-auto mb-4 mt-8"
             ></img>
-            <img src={chicken2} width="60%" className="mx-auto my-4 "></img>
+            <img
+              alt=""
+              src={chicken2}
+              width="60%"
+              className="mx-auto my-4 "
+            ></img>
             <h3 className="text-center font-bold text-4xl ">Let it grow</h3>
             <img
+              alt=""
               src={arrowdown}
               width="16%"
               className="mx-auto mb-4 mt-8"
             ></img>
 
-            <img src={chicken3} width="60%" className="mx-auto my-4"></img>
+            <img
+              alt=""
+              src={chicken3}
+              width="60%"
+              className="mx-auto my-4"
+            ></img>
             <p className="text-center font-bold text-3xl w-[60%] mx-auto">
               Claim anothe 25% discount 30 days after fully grown
             </p>

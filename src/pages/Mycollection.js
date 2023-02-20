@@ -26,6 +26,7 @@ const Mycollection = () => {
       <div className="relative overflow-hidden">
         <div className="relative z-0 bg-[#F9DC5C] p-2 h-[920px]">
           <img
+            alt=""
             src={bglayer}
             className="w-[100%] absolute top-0 bottom-0 z-[-1] "
           ></img>
@@ -39,7 +40,7 @@ const Mycollection = () => {
           </button>
           {nft ? (
             <div className="h-[50vh] w-[92%] mx-auto bg-black mt-20 my-2 rounded-xl  flex flex-col justify-center drop-shadow-xl">
-              <img src={Success} className="w-[80%] mx-auto"></img>
+              <img alt="" src={Success} className="w-[80%] mx-auto"></img>
               <Link to="/yournft" className="mx-auto">
                 <button className="bg-[#db7c26] my-10 py-3  inline w-[180px] rounded-3xl mx-auto  font-bold text-lg">
                   Your Collection
@@ -57,6 +58,7 @@ const Mycollection = () => {
               <div class=" animate-spin w-20 h-20 ">
                 <span class="visually-hidden ">
                   <img
+                    alt=""
                     src={chicken}
                     className="transform  origin-center transition duration-1000 ease-in-out hover:rotate-360"
                   ></img>

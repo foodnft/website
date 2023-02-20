@@ -63,6 +63,7 @@ function CreateAccount() {
     <div className="relative ">
       <div className=" relative z-0 bg-[#F9DC5C] p-2">
         <img
+          alt=""
           src={bglayer}
           className="w-[100%] absolute top-0 bottom-0 z-[-1] "
         />
@@ -181,7 +182,7 @@ function CreateAccount() {
   /* <div className="container">
       <div className="relative ">
         <div className=" relative z-0 bg-[#F9DC5C] p-2">
-          <img
+          <img alt=""
             src={bglayer}
             className="w-[100%] absolute top-0 bottom-0 z-[-1] "
           />

@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="bg-black h-[60px] flex justify-between  px-3 py-2 ">
       <Link to="/">
-        <img src={chicken}></img>
+        <img alt="" src={chicken}></img>
       </Link>
       <div className="my-auto">
         <Link to="/yournft" className="mx-auto">

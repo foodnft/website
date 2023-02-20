@@ -119,6 +119,7 @@ const Getnft = () => {
       <div className="relative overflow-hidden">
         <div className="relative z-0 bg-[#F9DC5C] p-2 h-[920px]">
           <img
+            alt=""
             src={bglayer}
             className="w-[100%] absolute top-0 bottom-0 z-[-1] "
           />

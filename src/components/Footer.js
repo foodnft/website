@@ -13,17 +13,18 @@ const Footer = () => {
         </h3>
         <p className="flex m-2 text-xl my-2">
           {" "}
-          <img src={mail} className="mr-2 w-6 "></img>your@anonheLper.com
+          <img alt="" src={mail} className="mr-2 w-6 "></img>your@anonheLper.com
         </p>
         <p className="flex m-2 text-xl my-2">
           {" "}
-          <img src={mail} className="mr-2 w-6"></img>your@broastedchicken.com
+          <img alt="" src={mail} className="mr-2 w-6"></img>
+          your@broastedchicken.com
         </p>
         <p className="flex m-2 text-xl my-2">
           {" "}
-          <img src={telegram} className="mr-2 w-6"></img>@CocktaiLDev
+          <img alt="" src={telegram} className="mr-2 w-6"></img>@CocktaiLDev
         </p>
-        <img src={chicken} className="w-[25%] mx-auto my-10 "></img>
+        <img alt="" src={chicken} className="w-[25%] mx-auto my-10 "></img>
       </div>
     </footer>
   );
