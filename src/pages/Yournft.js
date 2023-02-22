@@ -1,9 +1,10 @@
 import React from 'react'
 
-import chicken from '../images/chicken.svg'
-import mail from '../images/mail.svg'
-import telegram from '../images/telegram.svg'
-import bglayer from '../images/bglayer.svg'
+import chicken from "../images/chicken.svg";
+import mail from "../images/mail.svg";
+import telegram from "../images/telegram.svg";
+import bglayer from "../images/bglayer.svg";
+import Nft from "../Components/Nft";
 
 import { Link } from 'react-router-dom'
 

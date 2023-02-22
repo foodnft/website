@@ -10,8 +10,10 @@ import Footer from '../components/Footer'
 
 const Mycollection = () => {
 
+
     const [nft, setNft] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
+  
 
     function generateNft() {
         setNft(false)
