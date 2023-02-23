@@ -5,7 +5,7 @@ import bglayer from "../../images/bglayer.svg";
 import { asyncApiCall } from "../../Axios";
 
 import "./style.scss";
-
+//error in getNFT.js
 const Getnft = () => {
   const [digits, setDigits] = useState("");
   const [countryCode, setCountryCode] = useState("+60");
