@@ -5,6 +5,7 @@ import chicken from "../images/chicken.svg";
 import mail from "../images/mail.svg";
 import telegram from "../images/telegram.svg";
 
+
 const Header = () => {
   return (
     <header className="bg-black h-[60px] flex justify-between  px-3 py-2 ">
